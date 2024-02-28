@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "MANA Shoes";
+}
+
+
+    <h1 class="display-4">Welcome</h1>
+    
+    <div class="container">
+        <div class="row">
+            @foreach (Item item in Model)
+            {
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="@item.ImageUrls[0]" class="card-img-top" alt="@item.Name">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            @* <p class="card-text">@item.Description</p> *@
+                            <a class="btn btn-danger" asp-controller="Home" asp-action="Details" asp-route-id="@item.Id">Vai ai Dettagli</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
