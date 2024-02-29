@@ -18,9 +18,10 @@ namespace eserL5S3.Controllers
             return View(StaticDB.Items);
         }
 
+        // get per pagina Details
         public IActionResult Details([FromRoute] int id)
         {
-            Item item = StaticDB.GetItemById(id);
+            Item? item = StaticDB.GetItemById(id);
             if (item == null)
             {
                 return View("Error");

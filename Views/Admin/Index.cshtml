@@ -14,8 +14,10 @@
                     <img src="@item.ImageUrls[0]" class="card-img-top" alt="@item.Name">
                     <div class="card-body">
                         <h5 class="card-title">@item.Name</h5>
+                        <p>Id: @item.Id</p>
                         @* <p class="card-text">@item.Description</p> *@
                         <a class="btn btn-danger" asp-controller="Admin" asp-action="Delete" asp-route-id="@item.Id">Elimina</a>
+                        <a class="btn btn-info" asp-controller="Admin" asp-action="Edit" asp-route-id="@item.Id">Edita</a>
                     </div>
                 </div>
             </div>
